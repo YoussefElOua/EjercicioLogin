@@ -37,6 +37,10 @@ public class WebSecurity {
                 User.withUsername("user")
                         .password(passwordEncoder().encode("password"))
                         .roles("USER")
+                        .build(),
+                User.withUsername("admin")
+                        .password(passwordEncoder().encode("1234"))
+                        .roles("Admin")
                         .build()
         );
     }

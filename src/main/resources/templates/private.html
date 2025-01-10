@@ -7,7 +7,6 @@
 <h1>Bienvenido a la zona privada</h1>
 <p>Hola <strong th:text="${username}"></strong>. Has iniciado
     sesión exitosamente.</p>
-<p>tu rol es <strong th:text="~{rol}"></strong></p>
 <a th:href="@{/logout}">Cerrar Sesión</a>
 <h2>Roles</h2>
 <ul th:each="roles : ${rol}">
