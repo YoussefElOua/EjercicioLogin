@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Bienvenido, Administrador</h1>
+<p>Esta página solo es accesible para usuarios con el rol ADMIN.</p>
+<a th:href="@{/logout}">Cerrar sesión</a>
+</body>
+</html>

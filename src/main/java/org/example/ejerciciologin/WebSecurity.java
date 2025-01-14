@@ -15,7 +15,9 @@ public class WebSecurity {
     // Método con la autorización
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(auth -> auth.requestMatchers("/", "/css/**", "/js/**", "/images/**").permitAll()
+        http.authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/", "/css/**", "/js/**", "/images/**").permitAll() // Rutas públicas
+                        .requestMatchers("/RUTAADMIN").hasRole("Admin") // Ruta solo para administradores
                         .anyRequest().authenticated()
                 )
                 .formLogin(login -> login

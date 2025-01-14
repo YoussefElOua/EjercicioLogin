@@ -22,6 +22,11 @@ public class LoginController {
         authorization(model);
         return "private";
     }
+    @GetMapping("/RUTAADMIN")
+    public String adminOnly() {
+        return "adminOnly";
+    }
+
 
 
 
